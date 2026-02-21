@@ -1,6 +1,29 @@
 import { BsCartPlus } from "react-icons/bs";
 
+import { api } from "../../services/api";
+
+import { useEffect, useState } from "react";
+
+interface ProdutosProps {
+  cover: string;
+  description: string;
+  id: string;
+  price: number;
+  title: string;
+}
+
 export function Home() {
+  const [products, setProducts] = useState<ProdutosProps[]>([]);
+
+  useEffect(() => {
+    async function getProducts() {
+      const reponse = await api.get("/produtos");
+      setProducts(reponse.data);
+    }
+
+    getProducts();
+  }, []);
+
   return (
     <div>
       <main className="w-full max-w-7xl px-4 mx-auto">

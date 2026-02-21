@@ -1,0 +1,144 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "title": "AirPods Apple",
+      "description": "Fones de ouvido sem fio com tecnologia Bluetooth, som de alta qualidade e integração perfeita com dispositivos Apple. Ideal para uso diário, chamadas e músicas.",
+      "price": 120,
+      "cover": "https://via.placeholder.com/300x300?text=AirPods"
+    },
+    {
+      "id": 2,
+      "title": "Notebook Gamer Lenovo",
+      "description": "Notebook gamer desenvolvido para alto desempenho, ideal para jogos, estudos e tarefas pesadas. Conta com hardware potente e design moderno.",
+      "price": 3799.9,
+      "cover": "https://via.placeholder.com/300x300?text=Notebook+Gamer"
+    },
+    {
+      "id": 3,
+      "title": "Teclado Mecânico HyperX",
+      "description": "Teclado mecânico gamer com switches responsivos, iluminação RGB personalizável e estrutura resistente para longas sessões de uso.",
+      "price": 199.99,
+      "cover": "https://via.placeholder.com/300x300?text=Teclado+Mecanico"
+    },
+    {
+      "id": 4,
+      "title": "Monitor Gamer 34",
+      "description": "Monitor ultrawide curvo que oferece maior campo de visão, excelente fluidez e imersão para jogos, filmes e produtividade.",
+      "price": 2099.99,
+      "cover": "https://via.placeholder.com/300x300?text=Monitor+Gamer"
+    },
+    {
+      "id": 5,
+      "title": "Soundbar LG",
+      "description": "Soundbar potente com conexão Bluetooth, proporcionando áudio mais envolvente para filmes, músicas e jogos.",
+      "price": 1099.99,
+      "cover": "https://via.placeholder.com/300x300?text=Soundbar"
+    },
+    {
+      "id": 6,
+      "title": "Galaxy Watch 5",
+      "description": "Smartwatch moderno com recursos avançados de monitoramento de saúde, atividades físicas e integração com smartphones.",
+      "price": 1139,
+      "cover": "https://via.placeholder.com/300x300?text=Smartwatch"
+    },
+    {
+      "id": 7,
+      "title": "Mouse Gamer",
+      "description": "Mouse gamer com alta precisão, design ergonômico e excelente resposta para jogos competitivos e uso diário.",
+      "price": 129.99,
+      "cover": "https://via.placeholder.com/300x300?text=Mouse+Gamer"
+    },
+    {
+      "id": 8,
+      "title": "Headset Gamer",
+      "description": "Headset gamer com som surround, proporcionando maior imersão em jogos, além de conforto para longas horas de uso.",
+      "price": 249.99,
+      "cover": "https://via.placeholder.com/300x300?text=Headset"
+    },
+    {
+      "id": 9,
+      "title": "Cadeira Gamer",
+      "description": "Cadeira gamer ergonômica com ajustes de altura e inclinação, oferecendo conforto e suporte para longas sessões.",
+      "price": 1399.99,
+      "cover": "https://via.placeholder.com/300x300?text=Cadeira+Gamer"
+    },
+    {
+      "id": 10,
+      "title": "Webcam Full HD",
+      "description": "Webcam com resolução Full HD, ideal para videochamadas, reuniões online, aulas remotas e transmissões ao vivo.",
+      "price": 499.99,
+      "cover": "https://via.placeholder.com/300x300?text=Webcam"
+    },
+    {
+      "id": 11,
+      "title": "Microfone USB",
+      "description": "Microfone USB com ótima captação de áudio, indicado para gravações, lives, podcasts e chamadas online.",
+      "price": 189.99,
+      "cover": "https://via.placeholder.com/300x300?text=Microfone"
+    },
+    {
+      "id": 12,
+      "title": "SSD 1TB",
+      "description": "SSD NVMe de alta velocidade, garantindo inicializações rápidas, melhor desempenho do sistema e mais produtividade.",
+      "price": 399.99,
+      "cover": "https://via.placeholder.com/300x300?text=SSD+1TB"
+    },
+    {
+      "id": 13,
+      "title": "HD Externo 2TB",
+      "description": "HD externo portátil com grande capacidade de armazenamento, ideal para backups e transporte de arquivos.",
+      "price": 459.99,
+      "cover": "https://via.placeholder.com/300x300?text=HD+Externo"
+    },
+    {
+      "id": 14,
+      "title": "RTX 3060",
+      "description": "Placa de vídeo de alto desempenho, ideal para jogos modernos, edição de vídeo e aplicações gráficas exigentes.",
+      "price": 2399.99,
+      "cover": "https://via.placeholder.com/300x300?text=RTX+3060"
+    },
+    {
+      "id": 15,
+      "title": "Fonte 650W",
+      "description": "Fonte de alimentação com certificação 80 Plus, garantindo eficiência energética e estabilidade para seu computador.",
+      "price": 499.99,
+      "cover": "https://via.placeholder.com/300x300?text=Fonte+650W"
+    },
+    {
+      "id": 16,
+      "title": "Gabinete Gamer",
+      "description": "Gabinete gamer com design moderno, iluminação RGB e excelente fluxo de ar para manter os componentes resfriados.",
+      "price": 349.99,
+      "cover": "https://via.placeholder.com/300x300?text=Gabinete"
+    },
+    {
+      "id": 17,
+      "title": "Controle Xbox",
+      "description": "Controle sem fio com design ergonômico, compatível com consoles e PC, oferecendo conforto e precisão.",
+      "price": 429.99,
+      "cover": "https://via.placeholder.com/300x300?text=Controle+Xbox"
+    },
+    {
+      "id": 18,
+      "title": "Echo Dot",
+      "description": "Smart speaker com Alexa integrada, ideal para controlar dispositivos inteligentes, ouvir músicas e obter informações.",
+      "price": 379.99,
+      "cover": "https://via.placeholder.com/300x300?text=Echo+Dot"
+    },
+    {
+      "id": 19,
+      "title": "Kindle",
+      "description": "Leitor digital leve e portátil, com tela confortável para leitura e bateria de longa duração.",
+      "price": 499.99,
+      "cover": "https://via.placeholder.com/300x300?text=Kindle"
+    },
+    {
+      "id": 20,
+      "title": "Power Bank",
+      "description": "Bateria portátil com alta capacidade, ideal para recarregar smartphones e outros dispositivos em qualquer lugar.",
+      "price": 149.99,
+      "cover": "https://via.placeholder.com/300x300?text=Power+Bank"
+    }
+  ]
+}
