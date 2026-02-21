@@ -31,7 +31,7 @@ export function Home() {
           Produtos em alta
         </h1>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           {products &&
             products.map((produto) => (
               <section className="w-full" key={produto.id}>
