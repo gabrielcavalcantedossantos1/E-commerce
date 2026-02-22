@@ -11,7 +11,8 @@ export function Header() {
     <header className="w-full px-1 bg-slate-200">
       <nav className="w-full max-w-7xl h-14 flex items-center px-5 justify-between mx-auto">
         <Link to="/" className="font-bold text-2xl">
-          Dev Shop
+          Dev
+          <span className="text-sky-500"> Shop</span>
         </Link>
         <Link to="/cart" className="relative">
           <FiShoppingCart size={24} color="#121212" />
