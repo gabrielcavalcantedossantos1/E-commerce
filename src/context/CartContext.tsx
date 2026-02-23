@@ -3,7 +3,7 @@ import type { ProdutosProps } from "../pages/Home";
 
 interface CartContextData {
   cart: CartProps[];
-  cartAmount: number;
+  cartAmount: number; // quantidade de produtos diferentes
   addItemCart: (newItem: ProdutosProps) => void;
   removeItemCart: (produto: CartProps) => void;
   total: string;
@@ -27,31 +27,34 @@ export const CartContext = createContext({} as CartContextData);
 
 function CartProvider({ children }: ChildrenProps) {
   const [cart, setCart] = useState<CartProps[]>([]);
-  const [totalCart, setTotalCart] = useState("R$ 0,00"); // inicializar com valor padrão
+  const [totalCart, setTotalCart] = useState("R$ 0,00"); // inicializa total
 
-  // Corrige: atualiza o estado totalCart
+  // Atualiza o total do carrinho
   function totalResultCart(items: CartProps[]) {
     const result = items.reduce((acc, item) => acc + item.total, 0);
     const formattedResult = result.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
-    setTotalCart(formattedResult); // ✅ atualiza estado
+    setTotalCart(formattedResult);
   }
 
+  // Adiciona item ao carrinho
   function addItemCart(newItem: ProdutosProps) {
     const indexItem = cart.findIndex((item) => item.id === newItem.id);
 
     if (indexItem !== -1) {
+      // se já existe, só aumenta a quantidade
       const cartList = [...cart];
       cartList[indexItem].amount += 1;
       cartList[indexItem].total =
         cartList[indexItem].amount * cartList[indexItem].price;
       setCart(cartList);
-      totalResultCart(cartList); // ✅ atualiza total
+      totalResultCart(cartList);
       return;
     }
 
+    // se não existe, adiciona novo produto
     const data: CartProps = {
       ...newItem,
       amount: 1,
@@ -60,11 +63,12 @@ function CartProvider({ children }: ChildrenProps) {
 
     setCart((prev) => {
       const newCart = [...prev, data];
-      totalResultCart(newCart); // ✅ atualiza total
+      totalResultCart(newCart);
       return newCart;
     });
   }
 
+  // Remove item do carrinho
   function removeItemCart(produto: CartProps) {
     const indexItem = cart.findIndex((item) => item.id === produto.id);
     if (indexItem === -1) return;
@@ -72,20 +76,23 @@ function CartProvider({ children }: ChildrenProps) {
     const cartList = [...cart];
 
     if (cartList[indexItem].amount > 1) {
+      // diminui quantidade
       cartList[indexItem].amount -= 1;
       cartList[indexItem].total =
         cartList[indexItem].amount * cartList[indexItem].price;
       setCart(cartList);
-      totalResultCart(cartList); // ✅ atualiza total
+      totalResultCart(cartList);
       return;
     }
 
-    const removeItem = cartList.filter((item) => item.id !== produto.id);
-    setCart(removeItem);
-    totalResultCart(removeItem); // ✅ atualiza total
+    // remove item se amount = 1
+    const newCart = cartList.filter((item) => item.id !== produto.id);
+    setCart(newCart);
+    totalResultCart(newCart);
   }
 
-  const cartAmount = cart.reduce((acc, item) => acc + item.amount, 0);
+  // Quantidade de produtos diferentes (para a bolinha)
+  const cartAmount = cart.length;
 
   return (
     <CartContext.Provider
@@ -94,7 +101,7 @@ function CartProvider({ children }: ChildrenProps) {
         cartAmount,
         addItemCart,
         removeItemCart,
-        total: totalCart, // ✅ passar o estado correto
+        total: totalCart,
       }}
     >
       {children}

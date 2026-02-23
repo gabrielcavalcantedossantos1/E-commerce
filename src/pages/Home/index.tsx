@@ -1,6 +1,6 @@
 import { BsCartPlus } from "react-icons/bs";
 
-import { api } from "../../services/api";
+import { produtos } from "../../data/produtos";
 
 import { useContext, useEffect, useState } from "react";
 
@@ -20,8 +20,7 @@ export function Home() {
 
   useEffect(() => {
     async function getProducts() {
-      const reponse = await api.get("/produtos");
-      setProducts(reponse.data);
+      setProducts(produtos);
     }
 
     getProducts();
