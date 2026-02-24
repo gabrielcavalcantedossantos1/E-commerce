@@ -42,7 +42,7 @@ export function Home() {
             products.map((produto) => (
               <section className="w-full" key={produto.id}>
                 <img
-                  className="w-full rounded-lg max-w-70 mb2"
+                  className="w-full rounded-lg h-48 object-contain bg-white mb-2"
                   src={produto.cover}
                   alt={produto.title}
                 />
