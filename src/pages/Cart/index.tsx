@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
+import toast from "react-hot-toast";
+
 export function Cart() {
   const { cart, total, removeItemCart, addItemCart } = useContext(CartContext);
   return (
@@ -33,14 +35,20 @@ export function Cart() {
 
             <div className="flex items-center justify-center gap-3">
               <button
-                onClick={() => removeItemCart(item)}
+                onClick={() => {
+                  removeItemCart(item);
+                  toast.success("Produto subtraido do carrinho");
+                }}
                 className="bg-slate-600 px-2 rounded cursor-pointer text-white font-medium flex items-center justify-center"
               >
                 -
               </button>
               {item.amount}
               <button
-                onClick={() => addItemCart(item)}
+                onClick={() => {
+                  addItemCart(item);
+                  toast.success("Produto somado ao carrinho");
+                }}
                 className="bg-slate-600 px-2 rounded cursor-pointer text-white font-medium flex items-center justify-center"
               >
                 +

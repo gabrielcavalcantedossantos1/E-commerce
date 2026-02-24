@@ -6,6 +6,8 @@ import { useContext, useEffect, useState } from "react";
 
 import { CartContext } from "../../context/CartContext";
 
+import toast from "react-hot-toast";
+
 export interface ProdutosProps {
   cover: string;
   description: string;
@@ -27,6 +29,7 @@ export function Home() {
   }, []);
 
   function handleAddToCart(item: ProdutosProps) {
+    toast.success("Produto adicionado ao carrinho");
     addItemCart(item);
   }
 
