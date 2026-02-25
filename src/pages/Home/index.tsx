@@ -73,7 +73,10 @@ export function Home() {
                 </div>
                 <Link
                   to={`/produto/${produto.id}`}
-                  className="bg-gray-500 p-1 rounded cursor-pointer mt-3"
+                  className="mt-3 px-3 py-1 text-sm font-medium 
+             text-blue-600 border border-blue-600 
+             rounded hover:bg-blue-600 hover:text-white 
+             transition"
                 >
                   Ver produto
                 </Link>

@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { produtos } from "../../data/produtos";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import toast from "react-hot-toast";
 
 export function Details() {
   const { id } = useParams<{ id: string }>();
@@ -51,7 +52,10 @@ export function Details() {
         <p className="mb-6 text-zinc-700">{produto.description}</p>
 
         <button
-          onClick={handleAddToCart}
+          onClick={() => {
+            toast.success("Produto adicionado ao carrinho");
+            handleAddToCart();
+          }}
           className={`bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${
             itemNoCarrinho ? "opacity-70 cursor-not-allowed" : ""
           }`}
