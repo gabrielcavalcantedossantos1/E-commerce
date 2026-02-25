@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 export interface ProdutosProps {
   cover: string;
@@ -43,7 +44,10 @@ export function Home() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           {products &&
             products.map((produto) => (
-              <section className="w-full flex  flex-col items-center text-center" key={produto.id}>
+              <section
+                className="w-full flex  flex-col items-center text-center"
+                key={produto.id}
+              >
                 <img
                   className="w-full rounded-lg h-48 object-contain bg-white mb-2"
                   src={produto.cover}
@@ -57,13 +61,22 @@ export function Home() {
                       currency: "BRL",
                     })}
                   </strong>
+
                   <button
+                    aria-label={`Adicionar ${produto.title} ao carrinho`}
+                    title={`Adicionar ${produto.title} ao carrinho`}
                     onClick={() => handleAddToCart(produto)}
                     className="bg-zinc-900 p-1 rounded cursor-pointer"
                   >
                     <BsCartPlus size={20} color="#fff" />
                   </button>
                 </div>
+                <Link
+                  to={`/produto/${produto.id}`}
+                  className="bg-gray-500 p-1 rounded cursor-pointer mt-3"
+                >
+                  Ver produto
+                </Link>
               </section>
             ))}
         </div>
